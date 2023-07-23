@@ -1,20 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Main from './src/Main';
+import * as FileSystem from 'expo-file-system';
+import { useFonts } from 'expo-font';
+import { useEffect } from 'react';
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+  const [fontsLoaded] = useFonts({
+    'NanumGothic-Regular': require('./src/assets/fonts/NanumGothic-Regular.ttf'),
+    'NanumGothic-ExtraBold': require('./src/assets/fonts/NanumGothic-ExtraBold.ttf'),
+    'NanumGothic-Bold': require('./src/assets/fonts/NanumGothic-Bold.ttf'),
+  });
+  return (  
+    <View>
+      {
+        fontsLoaded && (
+          <View>
+            <StatusBar hidden={true} />
+            <Main />
+          </View>
+        )
+      }
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
