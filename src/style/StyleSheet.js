@@ -204,6 +204,33 @@ const styles = StyleSheet.create({
         height: 180,
         borderRadius: 100,
         backgroundColor: '#fff',
+    },
+    recTitleWrap: {
+        display: 'flex',
+        flexDirection: 'row',
+        marginLeft: 40,
+        marginTop: 30
+    },
+    recTitle: {
+        fontSize: 40,
+        fontFamily: 'NanumGothic-Bold',
+        color: colors.fontColor,
+        marginLeft: 8.42,
+    },
+    recLine: {
+        width: 10,
+        height: 42,
+        backgroundColor: colors.mainColor
+    },
+    recScroll: {
+        marginTop: 20,
+        marginRight: 40,
+        marginBottom: 40,
+        height: Dimensions.get('window').height - 120
+
+    },
+    recStt: {
+        fontSize: 16,
     }
 })
 
