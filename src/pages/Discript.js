@@ -15,7 +15,7 @@ const Discript = ({ navigation, route }) => {
     }
 
     const onClickMedia = () => {
-        // navigation.navigate('Media', route.params);
+        navigation.navigate('Media', route.params);
     };
 
     const onClickRec = () => {
