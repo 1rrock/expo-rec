@@ -1,11 +1,16 @@
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import containers from "../style/Containers";
 import SideBar from "../components/SideBar";
+import recordStyles from "../style/StyleRecord"
 import styles from "../style/StyleSheet";
-// import { Image } from 'expo-image';
+import { Image } from 'expo-image';
 
+import recbgImg from '../assets/images/record-bg.png';
 import MicImg from '../assets/images/mic-big.svg'
-// import MicImg from '../assets/images/bg2.png'
+import PlaySvg from '../assets/images/play.svg'
+import PauseSvg from '../assets/images/pause.svg'
+import StopSvg from '../assets/images/stop.svg'
+import RecSvg from '../assets/images/record.svg'
 
 const Record = ({navigation}) => {
     return (
@@ -18,8 +23,26 @@ const Record = ({navigation}) => {
                             <MicImg />
                         </View>
                     </View>
+                    <View style={recordStyles.range}>
+                        <View style={recordStyles.dot} />
+                    </View>
+                    <View style={recordStyles.btnWrap}>
+                        <TouchableOpacity>
+                            <PlaySvg />
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <PauseSvg />
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <StopSvg />
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <RecSvg />
+                        </TouchableOpacity>
+                    </View>
                 </View>
                 <View style={styles.recordRight}>
+                    <Image style={styles.recordBg} contentPosition={"top right"} contentFit='contain' source={recbgImg } />
                     <View style={styles.recTitleWrap}>
                         <View style={styles.recLine} />
                         <View>

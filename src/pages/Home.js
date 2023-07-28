@@ -51,8 +51,8 @@ const Home = ({ navigation }) => {
         <View style={containers.home}>
             <SideBar navigation={navigation} />
             <View style={containers.contents}>
-                <Image style={styles.bg} contentFit='cover' source={bgImg } />
-                <Image style={styles.bg2} contentFit='cover' source={bgImg2 } />
+                <Image style={styles.bg} contentPosition={"top right"} contentFit='contain' source={bgImg } />
+                <Image style={styles.bg2} contentPosition={"bottom left"} contentFit='contain' source={bgImg2 } />
                 <ScrollView style={styles.homePage}>
                     <View style={styles.ul}>
                         {

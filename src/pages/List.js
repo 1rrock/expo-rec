@@ -43,8 +43,8 @@ const List = ({ navigation, route }) => {
         <View style={containers.home}>
             <SideBar navigation={navigation} />
             <View style={containers.contents}>
-                <Image style={styles.bg} contentFit='cover' source={bgImg } />
-                <Image style={styles.bg2} contentFit='cover' source={bgImg2 } />
+                <Image style={styles.bg} contentPosition={"top right"} contentFit='contain' source={bgImg} />
+                <Image style={styles.bg2} contentPosition={"bottom left"} contentFit='contain' source={bgImg2 } />
                 <View style={styles.listPage}>
                     <View style={styles.listTitleWrap}>
                         <View style={styles.listLine} />

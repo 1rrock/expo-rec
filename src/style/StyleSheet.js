@@ -1,44 +1,53 @@
 import { StyleSheet, Dimensions } from "react-native";
 
-const colors = {
-    mainColor : '#0092FB',
-    fontColor: '#666'
-}
-
+import colors from './Colors';
 const styles = StyleSheet.create({
     bg: {
-        width: 467,
-        height: 509,
+        width: '40%',
+        height: '58%',
         position: 'absolute',
         right: 0,
         top: 0,
     },
     bg2: {
-        width: 237,
-        height: 258,
+        width: '25%',
+        height: '38%',
         position: 'absolute',
         left: 0,
         bottom: 0,
     },
+    recordBg: {
+        width: '40%',
+        height: '58%',
+        position: 'absolute',
+        right: 0,
+        top: 0,
+    },
+    sideBarBottom: {
+        display: 'flex',
+        gap: 20
+    }, 
     sideBar: {
         display: "flex",
         justifyContent: "space-between",
-        width: 100,
+        alignItems: 'center',
+        width: 80,
         height: '100%',
-        backgroundColor: colors.mainColor
+        backgroundColor: colors.mainColor,
+        paddingTop: 15,
+        paddingBottom: 15
     },
     sideBarBtn: {
-        width: 60,
-        height: 60,
-        margin: 20,
+        width: 50,
+        height: 50,
         borderRadius: 10,
         backgroundColor: "#66BEFD",
     },
-    contents: {
-        flex: 1,
-        backgroundColor: "#ffffff",
-        borderTopLeftRadius: 15,
-        borderBottomLeftRadius: 15,
+    sideBarBtnDisabled: {
+        width: 50,
+        height: 50,
+        borderRadius: 10,
+        backgroundColor: "#666E72",
     },
     main: {
         display: "flex",
@@ -59,8 +68,8 @@ const styles = StyleSheet.create({
     discriptPage: {
         marginTop: 42,
         marginLeft: 57,
-        marginBottom: 52,
-        marginRight: 40
+        marginRight: 57,
+        height: Dimensions.get('window').height - 40,
     },
     discriptMediaPage: {
         marginLeft: 57,
@@ -69,7 +78,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         gap: 28,
         height: '100%',
-        width: Dimensions.get('window').width - 100
+        width: Dimensions.get('window').width - 80,
     },
     ul: {
         display: 'flex',
@@ -106,7 +115,7 @@ const styles = StyleSheet.create({
     },
     listLine: {
         width: 9,
-        height: 110,
+        height: 86,
         backgroundColor: colors.mainColor
     },
     listTextWrap: {
@@ -125,7 +134,7 @@ const styles = StyleSheet.create({
         color: colors.fontColor
     },
     title: {
-        fontSize: 72,
+        fontSize: 48,
         fontFamily: 'NanumGothic-Bold',
         color: colors.fontColor,
         marginLeft: 8.42,
@@ -171,14 +180,14 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: "row",
         hegiht: '100%',
-        width: Dimensions.get('window').width - 100,
+        width: Dimensions.get('window').width - 80,
         backgroundColor: colors.mainColor
     },
     recordLeft: {
         flex: .5,
         display: 'flex',
         alignItems: "center",
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     recordRight: {
         flex: .5,
